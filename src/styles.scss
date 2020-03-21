@@ -3,7 +3,8 @@ html, body {
   font-style: normal;
   margin: 0;
   height: 100%;
-  background-color: rgba(222, 244, 243, 0.75);;
+  background-color: rgba(222, 244, 243, 0.75);
+  color: #767676;
 }
 
 button {
@@ -14,4 +15,9 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 24px;
 }

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { BaseLayoutModule } from 'src/app/modules/base-layout/base-layout.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { BaseLayoutModule } from 'src/app/modules/base-layout/base-layout.module
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    SharedModule,
     BaseLayoutModule
   ],
   providers: [],
