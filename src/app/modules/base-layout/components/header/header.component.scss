@@ -1,6 +1,6 @@
 :host {
   width: 100%;
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +37,7 @@
 .user {
   margin-right: 30px;
   &__icon {
-    width: 64px;
-    height: 64px;
+    width: 55px;
+    height: 55px;
   }
 }

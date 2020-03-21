@@ -1,0 +1,26 @@
+:host {
+  width: 100%;
+}
+
+.playing-bar {
+  background-color: #C4C4C4;
+
+  &__playing-progress {
+    background-color: #45B3AC;
+    height: 10px;
+    width: 20%;
+  }
+}
+
+.playing-info {
+  display: flex;
+  height: 80px;
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    margin-left: 45px;
+  }
+}
