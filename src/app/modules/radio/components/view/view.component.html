@@ -2,7 +2,13 @@
   <div class="controls">
     <div class="playing-info">
       <div class="actions">
-        <button class="actions__button"><img src="assets/icons/previous.svg" class="actions__skip-img"></button>
+        <button 
+          class="actions__button">
+          <img 
+            src="assets/icons/previous.svg"
+            class="actions__skip-img"
+            (click)="stationChange(false)">
+          </button>
         <button 
           class="actions__play-button">
           <img
@@ -10,14 +16,19 @@
             [src]="(isPlaying$ | async) ? 'assets/icons/pause.svg' : 'assets/icons/play.svg'"
             class="actions__play-img">
         </button>
-        <button class="actions__button"><img src="assets/icons/next.svg" class="actions__skip-img"></button>
+        <button class="actions__button">
+          <img 
+            src="assets/icons/next.svg" 
+            class="actions__skip-img"
+            (click)="stationChange(true)">
+        </button>
       </div>
     </div>
   </div>
-  <div class="stations" style="overflow: hidden;">
+  <div class="stations" (wheel)="scrollStations($event)">
     <div class="wrapper">
-      <div class="station" *ngFor="let station of stations">
-        <img [src]="station.cover" alt="">
+      <div class="station" *ngFor="let station of stations" (click)=play(station.url)>
+        <img [src]="station.cover" class="cover-img" [class.active]="station.url === currentStation && playerService.jepa">
       </div>
     </div>
   </div>

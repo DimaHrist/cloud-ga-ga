@@ -11,13 +11,31 @@
 }
 
 .station {
-  pointer-events: none;
-    flex: 0 0 auto;
-    margin: 0 16px;
-    box-shadow: 0 3px 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.station-active {
+  background-color: rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.cover-img {
+  margin: 0 16px;
+  box-shadow: 0 3px 4px;
+  transition: .2s;
+  width: 400px;
+  height: 400px;
+}
+
+.active {
+  width: 500px;
+  height: 500px;
 }
 
 .controls {
@@ -31,6 +49,7 @@
   background-color: #96C6C3;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .playing-info {
