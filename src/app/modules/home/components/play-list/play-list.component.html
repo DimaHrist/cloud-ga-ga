@@ -1,0 +1,12 @@
+<app-card>
+  <div class="content">
+    <img src="assets/icons/cover.svg">
+
+    <div class="list">
+      <div class="item" *ngFor="let item of list">
+        <p class="title"><span class="bold">{{item.tag}}</span>{{item.title}}</p>
+        <p class="time">{{item.time}}</p>
+      </div>
+    </div>
+  </div>
+</app-card>
