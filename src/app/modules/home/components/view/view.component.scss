@@ -1,0 +1,14 @@
+:host {
+  padding: 24px;
+}
+
+.main-layout {
+  display: flex;
+}
+
+.music {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
