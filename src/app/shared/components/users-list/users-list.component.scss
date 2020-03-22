@@ -1,0 +1,18 @@
+:host {
+  margin: 0 40px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #767676;
+  margin: 0;
+  padding: 15px;
+}
+
+.card {
+  height: 100%;
+  width: auto;
+}

@@ -1,0 +1,13 @@
+<div class="title-block">
+  <h1 *ngIf="title" class="title-block__title">{{title}}</h1>
+  <button>
+    <img src="assets/icons/add.svg" class="title-block__add" *ngIf="addable">
+  </button>
+</div>
+<div class="list">
+  <app-song></app-song>
+  <app-song></app-song>
+  <app-song></app-song>
+  <app-song></app-song>
+  <app-song></app-song>
+</div>
