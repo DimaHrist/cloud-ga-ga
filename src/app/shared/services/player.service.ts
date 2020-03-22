@@ -6,16 +6,40 @@ import { Subject } from 'rxjs';
 })
 export class PlayerService {
 
-  private jepa = false;
+  public jepa = false;
+
+  // Текущий стрим
+  private stream = new Audio();
 
   private isPlaying$ = new Subject<boolean>();
   public get isPlaying() {
     return this.isPlaying$;
   }
 
-  public changePlayStatus(): void{
-    this.jepa = !this.jepa;
+  public pause() {
+    this.stream.pause();
+    this.changePlayStatus(true);
+  }
+
+  public play() {
+    if (!this.stream.src) return;
+    this.stream.play();
+    this.changePlayStatus(false);
+  }
+
+  public test(url: string) {
+    if (this.stream.src !== url || this.stream.paused) {
+      this.stream.src = url;
+      this.play();
+    } else {
+      this.pause();
+    }
+  }
+
+  public changePlayStatus(isPause: boolean): void{
+    this.jepa = !isPause;
     this.isPlaying$.next(this.jepa);
   }
+
 
 }

@@ -14,6 +14,9 @@ export class ViewComponent implements OnInit {
   // Статус плеера
   public isPlaying$;
 
+  public currentStation: string;
+
+  // Массив станций
   public stations: IStation[];
 
   public createStations() {
@@ -69,11 +72,6 @@ export class ViewComponent implements OnInit {
         cover: 'assets/covers/rockhits.svg'
       },
       {
-        name: 'Russian Rap',
-        url: 'http://ic4.101.ru/stream/pro/aac/64/43',
-        cover: 'assets/covers/russianrap.svg'
-      },
-      {
         name: 'Russian Rock',
         url: 'http://ic4.101.ru:8000/c1_2',
         cover: 'assets/covers/russianrock.svg'
@@ -107,24 +105,39 @@ export class ViewComponent implements OnInit {
   }
 
   // Смена статуса плеера
-  public changePlayStatus(): void {
-    this.playerService.changePlayStatus();
+  public changePlayStatus(): void{
+    this.playerService.jepa ? this.playerService.pause() : this.playerService.play();
   }
 
-  public scrollStations() {
+ public scrollStations(event) {
+    const station = document.querySelector('.stations');
+    if (event.deltaY > 0) station.scrollLeft += 70;
+    else station.scrollLeft -= 70;
+  }
 
+  public stationChange(isNext: boolean) {
+    const index = this.stations.findIndex(item => item.url === this.currentStation);
 
-    window.addEventListener('wheel', (e) => {
-      const station = document.querySelector('.stations');
+    if (isNext && index !== this.stations.length-1) {
+      this.play(this.stations[index+1].url)
+    }
 
-      if (e.deltaY > 0) { station.scrollLeft += 100; }
-      else { station.scrollLeft -= 100; }
-    });
+    if (!isNext && index) {
+      this.play(this.stations[index-1].url)
+    }
+  }
+
+  public play(url: string) {
+    this.currentStation = url;
+    this.playerService.test(url);
   }
 
   ngOnInit() {
     this.isPlaying$ = this.playerService.isPlaying;
     this.createStations();
-    this.scrollStations();
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('wheel', null, true);
   }
 }
