@@ -14,6 +14,10 @@
       </div>
     </div>
   </div>
-  <div class="albums">
-    fmsdhsddfh
+  <div class="stations" style="overflow: hidden;">
+    <div class="wrapper">
+      <div class="station" *ngFor="let station of stations">
+        <img [src]="station.cover" alt="">
+      </div>
+    </div>
   </div>
