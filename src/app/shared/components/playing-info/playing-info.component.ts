@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-playing-info',
@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class PlayingInfoComponent implements OnInit {
 
   constructor() { }
+
+
+  @Input() public title: string;
+  @Input() public innerTitle: string;
+  @Input() public addable = false;
 
   ngOnInit() {
   }
