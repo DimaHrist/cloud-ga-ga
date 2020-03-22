@@ -26,6 +26,6 @@ export class UsersHistoryListComponent implements OnInit {
   ];
 
   ngOnInit() {
-    this.height = document.documentElement.clientHeight / 2.6;
+    this.height = document.documentElement.clientHeight / 3.1;
   }
 }
