@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from 'src/app/shared/services/player.service';
 import { IStation } from '../../interfaces/stations';
-import { url } from 'inspector';
 
 @Component({
   selector: 'app-view',
@@ -9,6 +8,8 @@ import { url } from 'inspector';
   styleUrls: ['./view.component.scss']
 })
 export class ViewComponent implements OnInit {
+
+  constructor(private readonly playerService: PlayerService) { }
 
   // Статус плеера
   public isPlaying$;
@@ -100,10 +101,8 @@ export class ViewComponent implements OnInit {
         url: 'http://ic4.101.ru:8000/c13_3',
         cover: 'assets/covers/trance.svg'
       },
-    ]
+    ];
   }
-
-  constructor(private readonly playerService: PlayerService) { }
 
   // Смена статуса плеера
   public changePlayStatus(): void{
@@ -141,5 +140,4 @@ export class ViewComponent implements OnInit {
   ngOnDestroy() {
     window.removeEventListener('wheel', null, true);
   }
-
 }

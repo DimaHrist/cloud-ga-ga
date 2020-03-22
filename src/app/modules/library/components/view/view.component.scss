@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-right: 40px;
+}
+
+app-carousel {
+  margin: 0 0 20px 40px;
+  width: 100%;
+}
+app-playing-info {
+  width: 100%;
+}
+
+app-users-list {
+  width: 25%;
+}

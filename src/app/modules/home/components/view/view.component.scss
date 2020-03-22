@@ -1,0 +1,27 @@
+:host {
+  height: calc(100% - 170px);
+}
+
+.main-layout {
+  padding: 24px;
+  display: flex;
+  height: calc(100% - 40px);
+}
+
+.music {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .play-lists {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.side-layout {
+  width: 25%;
+  padding-left: 24px;
+  height: calc(100% - 40px);
+}

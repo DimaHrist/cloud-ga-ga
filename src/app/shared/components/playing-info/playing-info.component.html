@@ -1,7 +1,7 @@
-<h1>Songs</h1>
+<h1 *ngIf="title">{{title}}</h1>
 <app-card class="info-card">
   <div class="info-card__d-flex">
-    <app-songs-list></app-songs-list>
+    <app-songs-list [title]="innerTitle" [addable]="addable"></app-songs-list>
     <app-author-info></app-author-info>
   </div>
 </app-card>

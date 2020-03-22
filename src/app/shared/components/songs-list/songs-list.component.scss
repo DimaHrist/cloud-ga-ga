@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0;
+}
+
+.title-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &__title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    color: #767676;
+  }
+
+  &__add {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}

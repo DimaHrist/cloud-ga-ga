@@ -1,0 +1,59 @@
+<app-card>
+  <div class="layout">
+    <div class="users">
+      <div class="title">Users</div>
+
+      <div class="list" [style.heignt.px]="height">
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+        <app-user></app-user>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="history">
+      <div class="title">History</div>
+
+      <div class="list" [style.height.px]="height">
+        <ng-container
+          *ngFor="let item of listHistory"
+          [ngTemplateOutletContext]="{item: item}"
+          [ngTemplateOutlet]="historyItem">
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</app-card>
+
+<ng-template #historyItem let-item="item">
+  <div class="item">
+    <img src="assets/icons/cover.svg">
+
+    <div class="data">
+      <div class="music">{{item.music}}</div>
+      <div class="album">
+        <div>{{item.album.title}}</div>
+        <div>{{item.album.year}}</div>
+      </div>
+      <div class="author">{{item.author}}</div>
+    </div>
+  </div>
+</ng-template>

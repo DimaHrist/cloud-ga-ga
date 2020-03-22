@@ -1,0 +1,43 @@
+.stations {
+  width: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.station {
+  pointer-events: none;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 16px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  .cover {
+    box-shadow: 0 3px 4px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .title {
+    margin: 8px 0 0 0;
+    font-size: 20px;
+    color: #292929;
+  }
+}

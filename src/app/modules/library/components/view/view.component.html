@@ -1,3 +1,7 @@
-<p>
-  LIBRARY works!
-</p>
+<div class="main">
+  <div class="wrapper">
+    <app-carousel></app-carousel>
+    <app-playing-info [innerTitle]="'My library'" [addable]="true"></app-playing-info>
+  </div>
+  <app-users-list [innerTitle]="'Users'" class="users"></app-users-list>
+</div>
