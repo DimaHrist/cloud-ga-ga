@@ -15,7 +15,7 @@ export class FooterComponent implements OnInit {
 
   // Смена статуса плеера
   public changePlayStatus(): void{
-    this.playerService.changePlayStatus();
+    // this.playerService.changePlayStatus();
   }
 
   ngOnInit() {
