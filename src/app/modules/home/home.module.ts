@@ -5,7 +5,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 import {
   ViewComponent,
-  PlayListComponent
+  PlayListComponent,
+  UsersHistoryListComponent
 } from './components';
 
 @NgModule({
@@ -16,7 +17,8 @@ import {
   ],
   declarations: [
     ViewComponent,
-    PlayListComponent
+    PlayListComponent,
+    UsersHistoryListComponent
   ]
 })
 export class HomeModule { }

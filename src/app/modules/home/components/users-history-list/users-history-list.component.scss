@@ -1,0 +1,58 @@
+:host {
+  color: #4A4A4A;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+  
+.title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #767676;
+  padding: 12px 12px 0 24px;
+}
+
+.list {
+  height: 38vh;
+  overflow: auto;
+  padding: 0 12px 0 12px;
+}
+
+.divider {
+  border-bottom-style: groove;
+  border-bottom-width: 2px;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+.history {
+
+  .item {
+    height: 77px;
+    margin: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    img {
+      width: 77px;
+    }
+
+    .data {
+      padding: 12px;
+      width: 100%;
+
+      .music {
+        font-size: 20px;
+      }
+
+      .album {
+        display: flex;
+        flex-direction: row;
+        font-size: 18px;
+        opacity: 0.7;
+      }
+    }
+  }
+}

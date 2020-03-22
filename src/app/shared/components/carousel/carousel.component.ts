@@ -11,10 +11,9 @@ export class CarouselComponent implements OnInit {
 
   public scrollStations(event) {
     const station = document.querySelector('.stations');
-    if (event.deltaY > 0) station.scrollLeft += 70;
-    else station.scrollLeft -= 70;
+    if (event.deltaY > 0) { station.scrollLeft += 70; }
+    else { station.scrollLeft -= 70; }
   }
-
 
   ngOnInit() {
   }
