@@ -1,0 +1,57 @@
+:host {
+  height: calc(100% - 170px);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: auto;
+}
+
+.station {
+  pointer-events: none;
+    flex: 0 0 auto;
+    margin: 0 16px;
+    box-shadow: 0 3px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls {
+  width: 100%;
+  height: 30%;
+}
+
+.stations {
+  width: 100%;
+  height: 70%;
+  background-color: #96C6C3;
+  display: flex;
+  position: relative;
+}
+
+.playing-info {
+  display: flex;
+  height:100%;
+  justify-content: center;
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+
+    &__play-button, &__play-img {
+      width: 70px;
+      height: 70px;
+    }
+
+    &__button, &__skip-img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

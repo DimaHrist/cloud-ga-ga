@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayerService } from 'src/app/shared/services/player.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  // Статус плеера
+  public isPlaying$;
+
+  constructor(private readonly playerService: PlayerService) { }
+
+  // Смена статуса плеера
+  public changePlayStatus(): void{
+    this.playerService.changePlayStatus();
+  }
 
   ngOnInit() {
+    this.isPlaying$ = this.playerService.isPlaying;
   }
 
 }

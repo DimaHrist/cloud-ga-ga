@@ -17,25 +17,42 @@
 }
 
 .navigation {
+  padding: 0;
   display: flex;
   list-style: none;
   width: 25%;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
+  font-weight: bold;
 
   &__item {
     height: fit-content;
     color: #767676;
   }
 
+  &__item-active {
+    height: fit-content;
+    color: #4a4a4a;
+    
+  }
+
+  &__item:focus {
+    height: fit-content;
+    outline: none;
+  }
+
   &__search-icon {
-    width: 26px;
-    height: 26px;
+    width: 20px;
+    height: 20px;
   }
 }
 
 .user {
   margin-right: 30px;
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
   &__icon {
     width: 55px;
     height: 55px;
