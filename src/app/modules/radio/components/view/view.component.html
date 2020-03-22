@@ -1,3 +1,19 @@
-<p>
-  RADIO works!
-</p>
+
+  <div class="controls">
+    <div class="playing-info">
+      <div class="actions">
+        <button class="actions__button"><img src="assets/icons/previous.svg" class="actions__skip-img"></button>
+        <button 
+          class="actions__play-button">
+          <img
+            (click)="changePlayStatus()"
+            [src]="(isPlaying$ | async) ? 'assets/icons/pause.svg' : 'assets/icons/play.svg'"
+            class="actions__play-img">
+        </button>
+        <button class="actions__button"><img src="assets/icons/next.svg" class="actions__skip-img"></button>
+      </div>
+    </div>
+  </div>
+  <div class="albums">
+    fmsdhsddfh
+  </div>

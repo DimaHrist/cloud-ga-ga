@@ -3,11 +3,34 @@
 </a>
 
 <ul class="navigation">
-  <li class="navigation__item" routerLink="/">HOME</li>
-  <li class="navigation__item" routerLink="/top">TOP</li>
-  <li class="navigation__item" routerLink="/library">LIBRARY</li>
-  <li class="navigation__item" routerLink="/radio">RADIO</li>
-  <li class="navigation__item"><img src="assets/icons/search.svg" class="navigation__search-icon"></li>
+  <li 
+    [class.navigation__item-active]="currentRoute === '' || currentRoute === '/'"
+    class="navigation__item"
+    routerLink="/">
+    HOME
+  </li>
+  <li
+    [class.navigation__item-active]="currentRoute === '/top'"
+    class="navigation__item"
+    routerLink="/top">
+    TOP
+  </li>
+  <li
+    [class.navigation__item-active]="currentRoute === '/library'"
+    class="navigation__item"
+    routerLink="/library">
+    LIBRARY
+  </li>
+  <li
+    [class.navigation__item-active]="currentRoute === '/radio'"
+    class="navigation__item"
+    routerLink="/radio">
+    RADIO
+  </li>
+  <li
+    class="navigation__item">
+    <img src="assets/icons/search.svg" class="navigation__search-icon">
+  </li>
 </ul>
 
 <div class="user">
