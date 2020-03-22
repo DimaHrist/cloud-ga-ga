@@ -9,6 +9,12 @@
     "src/polyfills.ts"
   ],
   "include": [
+    "types/museria.d.ts",
     "src/**/*.ts"
-  ]
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "types": [ "node" ],
+  "typeRoots": [ "../node_modules/@types" ]
 }
