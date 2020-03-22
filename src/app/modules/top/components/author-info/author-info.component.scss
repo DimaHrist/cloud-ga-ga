@@ -1,0 +1,72 @@
+:host {
+  display: flex;
+  background: url("src/assets/icons/cover.svg");
+  background-size: cover;
+  position: relative;
+}
+
+.wrapper {
+  position: absolute;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(150px);
+  background-color: rgba(255, 255, 255, .35);
+
+  .content {
+    width: initial;
+    height: 100%;
+    padding: 0 30px;
+
+    &__cover {
+      margin-top: 30px;
+      width: 240px;
+      height: 240px;
+    }
+
+    &__description {
+      &__title {
+        font-weight: bold;
+      }
+
+      font-size: 18px;
+      color: #292929;
+    }
+
+    .splitter {
+      border-color: rgba(255, 255, 255, .5);
+      width: 100%;
+    }
+
+    .albums {
+      &__title {
+        font-weight: bold;
+        font-size: 18px;
+        color: #292929;
+      }
+
+      &__items {
+        display: flex;
+        flex-wrap: wrap;
+
+        .album {
+          margin: 0 15px 10px 0;
+          font-size: 12px;
+
+          &__cover {
+            width: 100px;
+            height: 100px;
+          }
+          &__title {
+            margin: 0;
+            font-weight: bold;
+            color: #292929;
+          }
+          &__year {
+          }
+        }
+      }
+    }
+  }
+}
+

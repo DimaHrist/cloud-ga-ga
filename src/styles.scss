@@ -21,3 +21,9 @@ h1 {
   font-weight: bold;
   font-size: 24px;
 }
+
+.splitter {
+  width: 80%;
+  height: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
