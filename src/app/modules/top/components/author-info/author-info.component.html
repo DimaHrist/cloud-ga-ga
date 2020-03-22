@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="content">
+    <img src="assets/icons/cover.svg" class="content__cover">
+    <p class="content__description"><span class="content__description__title">Anacondaz</span>
+      — российская рэп-группа, образованная в Астрахани в 2009 году.
+      Представляет собой секстет и имеет на своём счету шесть студийных альбомов и три мини-альбома.</p>
+    <div class="splitter"></div>
+    <div class="content__albums">
+      <h2 class="albums__title">Other albums</h2>
+      <div class="albums__items">
+        <div class="album" *ngFor="let album of [1,2,3,4,5,6]">
+          <img src="assets/icons/cover.svg" class="album__cover">
+          <div>
+            <h3 class="album__title">Nevermind</h3>
+            <span class="album__year">1991</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
