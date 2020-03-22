@@ -9,6 +9,9 @@ export class UsersHistoryListComponent implements OnInit {
 
   constructor() { }
 
+  // Высота экрана
+  public height: any;
+
   // Список итосрии
   public listHistory = [
     {music: 'Track', album: {title: 'Album', year: '1996'}, author: 'Author'},
@@ -23,6 +26,6 @@ export class UsersHistoryListComponent implements OnInit {
   ];
 
   ngOnInit() {
+    this.height = document.documentElement.clientHeight / 2.6;
   }
-
 }

@@ -3,7 +3,7 @@
     <div class="users">
       <div class="title">Users</div>
 
-      <div class="list">
+      <div class="list" [style.heignt.px]="height">
         <app-user></app-user>
         <app-user></app-user>
         <app-user></app-user>
@@ -32,7 +32,7 @@
     <div class="history">
       <div class="title">History</div>
 
-      <div class="list">
+      <div class="list" [style.height.px]="height">
         <ng-container
           *ngFor="let item of listHistory"
           [ngTemplateOutletContext]="{item: item}"
